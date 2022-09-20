@@ -2,7 +2,7 @@
   --primary-text-color: #757575;
   --title-text-color: #212121;
   --accent-color: #2196f3;
-  --btn-hover-color: #97caf4;
+  --btn-hover-color: #7cbdf1;
   --primary-white-color: #ffffff;
   --background-black-color: #2f303a;
   --background-second-color: #f5f4fa;
@@ -203,6 +203,8 @@ body {
 }
 
 .contacts-nav .link:hover,
+.contacts-nav .link:focus,
+.footer-contacts .link:hover,
 .footer-contacts .link:focus {
   color: var(--accent-color);
   text-decoration: none;
@@ -412,8 +414,6 @@ body {
   height: 44px;
   border-radius: 50%;
   fill: #757575;
-  transition: fill 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-client,
@@ -542,8 +542,15 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
   fill: var(--primary-white-color);
+}
+
+.social-link-white:hover,
+.social-link-white:focus {
+  background-color: var(--accent-color);
+  transition: background-color 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .network-list {
@@ -598,7 +605,8 @@ body {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 
-  transition: fill 250ms;
+  transition: background-color 250ms;
+  transition: color 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* ====== Windows Box-descr ====== */
@@ -629,14 +637,14 @@ body {
 
   color: var(--primary-white-color);
 
-  transition: transform 250ms;
+  transition: transform 800ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-link:hover .box-descr .text,
 .card-link:focus .box-descr .text {
   transform: translateY(0%);
-  transition: fill 250ms;
+  transition: transform 800ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* ======= Portfolio main box======== */
